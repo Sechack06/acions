@@ -19,7 +19,7 @@ jobs:
       - name: Display Python version
         run: python -c "import sys; print(sys.version)" > ${{ matrix.python-version }}.txt
       - name: Archive artifacts
-      - uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v3
         with:
           name: my-artifact
           path: ${{ matrix.python-version }}.txt
